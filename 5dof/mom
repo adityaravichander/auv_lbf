@@ -1,0 +1,13 @@
+A = cos(theta_ld)*cos(theta_b)*cos(psi_ld - psi_b) + sin(theta_ld)*sin(theta_b);
+
+re_dot = uld*A - ul*[ cos(theta_l)*cos(theta_b)*(cos(psi_le) - 1) + cos(theta_le) ];
+
+theta_le_dot = theta_le_D_dot - F_theta_l - b_theta*q;
+
+psi_le_dot = psi_le_D_dot - F_psi_l - sec(theta)*r;
+
+ul_dot = fu1 + bu*cos(theta_a)*cos(psia)*Tu + du1;
+
+
+
+ syms xe ye ze ul theta_l psi_l theta psi u v w q r theta_l_D_dot 
